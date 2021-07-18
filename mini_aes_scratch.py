@@ -19,7 +19,6 @@ def sBox(str):
     }
     return d[str]
 
-
 def nibbleSub(arr):
     arr[0][0] = sBox(str(arr[0][0]))
     arr[0][1] = sBox(str(arr[0][1]))
@@ -27,13 +26,11 @@ def nibbleSub(arr):
     arr[1][1] = sBox(str(arr[1][1]))
     return arr
 
-
 def shiftRows(arr):
     temp = arr[1][1]
     arr[1][1] = arr[1][0]
     arr[1][0] = temp
     return arr
-
 
 def mul(t, b):
     a = bin(t)[2::]
@@ -42,7 +39,6 @@ def mul(t, b):
     # print(b)
     # x
     return x
-
 
 def mixColums(arr):
     arr[0][0] = mul(3, arr[0][0]) + mul(2, arr[1][0])
